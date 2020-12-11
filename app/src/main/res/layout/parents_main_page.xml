@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/house_icon"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/house_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/parents_icon"/>
+
+    <ImageView
+        android:id="@+id/parents_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/parents_icon"
+        app:layout_constraintStart_toEndOf="@+id/house_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/smart_home_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/smart_home_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:id="@+id/light_button"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:background="@drawable/light_bulb_icon"
+        android:onClick="lightPageForward"
+        android:radius="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp" />
+
+    <Button
+        android:id="@+id/temperature_button"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:background="@drawable/temperature_icon"
+        android:onClick="temperaturePageForward"
+        android:radius="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="60dp" />
+
+    <Button
+        android:id="@+id/bathtub_button"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:background="@drawable/bathtub_icon"
+        android:onClick="bathtubPageForward"
+        android:radius="60dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="260dp"
+        android:layout_marginRight="60dp" />
+
+    <Button
+        android:id="@+id/fridge_button"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:background="@drawable/fridge_icon"
+        android:onClick="fridgePageForward"
+        android:radius="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="40dp" />
+
+    <Button
+        android:id="@+id/socket_button"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:background="@drawable/socket_icon"
+        android:onClick="socketPageForward"
+        android:radius="60dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="360dp"
+        android:layout_marginRight="40dp" />
+
+    <Button
+        android:id="@+id/security_button"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:background="@drawable/security_icon"
+        android:onClick="securityPageForward"
+        android:radius="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="460dp"
+        android:layout_marginLeft="120dp" />
+
+    <Button
+        android:id="@+id/vacuum_button7"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:background="@drawable/vacuum_icon"
+        android:onClick="vacuumPageForward"
+        android:radius="60dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="460dp"
+        android:layout_marginRight="120dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
