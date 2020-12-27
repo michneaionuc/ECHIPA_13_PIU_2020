@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ParentsMainPage"/>
+        <activity android:name=".TemperatureActivity"/>
     </application>
 
 </manifest>
