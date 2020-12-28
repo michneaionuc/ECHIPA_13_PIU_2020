@@ -1,10 +1,11 @@
-package com.example.smarthouse
+package com.example.smarthouse.vacuum
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.smarthouse.R
 
 class VacuumSettingsActivity: AppCompatActivity() {
 

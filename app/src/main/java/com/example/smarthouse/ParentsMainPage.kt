@@ -2,9 +2,11 @@ package com.example.smarthouse
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.example.smarthouse.security.SecurityMainActivity
+import com.example.smarthouse.temperature.TemperatureActivity
+import com.example.smarthouse.vacuum.VacuumOffActivity
 
 class ParentsMainPage: AppCompatActivity() {
 
@@ -26,7 +28,7 @@ class ParentsMainPage: AppCompatActivity() {
             startActivity(intent)
         }
 
-        val securityButton: Button = findViewById(R.id.security_button)
+        val securityButton: ImageButton = findViewById(R.id.security_button)
 
         securityButton.setOnClickListener {
             val intent = Intent(this, SecurityMainActivity::class.java)

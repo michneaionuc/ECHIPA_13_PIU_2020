@@ -1,12 +1,11 @@
-package com.example.smarthouse
+package com.example.smarthouse.temperature
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.get
 import androidx.core.widget.addTextChangedListener
+import com.example.smarthouse.R
 
 class TemperatureActivity: AppCompatActivity() {
 
