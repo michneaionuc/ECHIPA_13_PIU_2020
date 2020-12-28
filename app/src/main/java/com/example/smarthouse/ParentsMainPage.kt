@@ -11,6 +11,13 @@ class ParentsMainPage: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.parents_main_page)
 
+        val vacuumButton: Button = findViewById(R.id.vacuum_button)
+
+        vacuumButton.setOnClickListener {
+            val intent = Intent(this, VacuumOffActivity::class.java)
+            startActivity(intent)
+        }
+
         val temperatureButton: Button = findViewById(R.id.temperature_button)
 
         temperatureButton.setOnClickListener {

@@ -115,11 +115,10 @@
         android:layout_marginLeft="120dp" />
 
     <Button
-        android:id="@+id/vacuum_button7"
+        android:id="@+id/vacuum_button"
         android:layout_width="60dp"
         android:layout_height="70dp"
         android:background="@drawable/vacuum_icon"
-        android:onClick="vacuumPageForward"
         android:radius="60dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
