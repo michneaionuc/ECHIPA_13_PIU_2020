@@ -20,6 +20,7 @@
         <activity android:name=".VacuumOffActivity"/>
         <activity android:name=".VacuumOnActivity"/>
         <activity android:name=".VacuumSettingsActivity"/>
+        <activity android:name=".TemperatureActivity"/>
     </application>
 
 </manifest>

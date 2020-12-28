@@ -60,7 +60,6 @@
         android:layout_width="60dp"
         android:layout_height="70dp"
         android:background="@drawable/temperature_icon"
-        android:onClick="temperaturePageForward"
         android:radius="60dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"

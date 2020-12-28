@@ -17,5 +17,12 @@ class ParentsMainPage: AppCompatActivity() {
             val intent = Intent(this, VacuumOffActivity::class.java)
             startActivity(intent)
         }
+
+        val temperatureButton: Button = findViewById(R.id.temperature_button)
+
+        temperatureButton.setOnClickListener {
+            val intent = Intent(this, TemperatureActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
