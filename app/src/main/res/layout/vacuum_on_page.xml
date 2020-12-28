@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/house_icon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/house_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/parents_icon"/>
+
+    <ImageView
+        android:id="@+id/parents_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/parents_icon"
+        app:layout_constraintStart_toEndOf="@+id/house_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/power_off_button"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/power_off"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/house_icon"
+        android:layout_marginTop="15dp" />
+
+    <ImageButton
+        android:id="@+id/vacuum_settings"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/vacuum_settings"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/power_off_button"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/battery_life"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vacuum_settings"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        />
+
+    <ProgressBar
+        android:id="@+id/battery_life_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/battery_life"
+        android:indeterminate="false"
+        android:max="100"
+        android:minWidth="200dp"
+        android:minHeight="50dp"
+        android:progress="100"
+        />
+
+    <TextView
+        android:id="@+id/dust_storage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/battery_life_progress_bar"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        />
+
+    <ProgressBar
+        android:id="@+id/dust_storage_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dust_storage"
+        android:indeterminate="false"
+        android:max="100"
+        android:minWidth="200dp"
+        android:minHeight="50dp"
+        android:progress="100"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

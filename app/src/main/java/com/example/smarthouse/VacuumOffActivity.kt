@@ -3,18 +3,19 @@ package com.example.smarthouse
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
-class ParentsMainPage: AppCompatActivity() {
+class VacuumOffActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.parents_main_page)
+        setContentView(R.layout.vacuum_off_page)
 
-        val vacuumButton: Button = findViewById(R.id.vacuum_button)
+        val powerOnButton :ImageButton = findViewById(R.id.power_on_button)
 
-        vacuumButton.setOnClickListener {
-            val intent = Intent(this, VacuumOffActivity::class.java)
+        powerOnButton.setOnClickListener {
+            val intent = Intent(this, VacuumOnActivity::class.java)
             startActivity(intent)
         }
     }
