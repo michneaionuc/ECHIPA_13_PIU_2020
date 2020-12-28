@@ -24,5 +24,12 @@ class ParentsMainPage: AppCompatActivity() {
             val intent = Intent(this, TemperatureActivity::class.java)
             startActivity(intent)
         }
+
+        val securityButton: Button = findViewById(R.id.security_button)
+
+        securityButton.setOnClickListener {
+            val intent = Intent(this, SecurityMainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
