@@ -27,6 +27,7 @@
         <activity android:name=".security.SecurityViewActivity" />
         <activity android:name=".security.SecurityFrontDoorActivity" />
         <activity android:name=".fridge.MenuFridgeActivity" />
+        <activity android:name=".fridge.NotificationFridgeActivity" />
         <activity android:name=".LoginActivity" />
     </application>
 

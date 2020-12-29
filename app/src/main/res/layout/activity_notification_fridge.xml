@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="10dp"
+    tools:context=".fridge.NotificationFridgeActivity">
+
+    <ImageView
+        android:id="@+id/house_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/house_icon"
+        app:layout_constraintEnd_toStartOf="@+id/parents_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/parents_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="220dp"
+        android:src="@drawable/parents_icon"
+        app:layout_constraintStart_toEndOf="@+id/house_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/notification_fridge_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/background"
+        android:src="@drawable/not1"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/parents_icon" />
+
+    <ImageView
+        android:id="@+id/notification_fridge"
+        android:layout_width="209dp"
+        android:layout_height="342dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/background"
+        android:src="@drawable/fridge_icon_notif"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/house_icon"
+        tools:layout_editor_absoluteX="10dp">
+
+    </ImageView>
+
+    <ImageButton
+        android:id="@+id/notification_fridge_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/background"
+        android:src="@drawable/notif3"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/notification_fridge_1" />
+
+    <ImageButton
+        android:id="@+id/notification_fridge_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/background"
+        android:src="@drawable/notif4"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/notification_fridge_2" />
+
+    <ImageButton
+        android:id="@+id/notification_fridge_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/background"
+        android:src="@drawable/not2"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/notification_fridge_3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

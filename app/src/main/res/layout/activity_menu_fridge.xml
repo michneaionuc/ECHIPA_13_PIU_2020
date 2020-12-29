@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".fridge.MenuFridgeActivity"
     android:padding="10dp"
-    >
+    tools:context=".fridge.MenuFridgeActivity">
 
     <ImageView
         android:id="@+id/house_icon"
@@ -15,77 +14,90 @@
         android:layout_height="55dp"
         android:layout_marginStart="30dp"
         android:src="@drawable/house_icon"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/parents_icon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/parents_icon"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/parents_icon"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/parents_icon"
         android:layout_marginStart="220dp"
+        android:src="@drawable/parents_icon"
         app:layout_constraintStart_toEndOf="@+id/house_icon"
         app:layout_constraintTop_toTopOf="parent" />
 
-   <RelativeLayout
-       android:layout_width="wrap_content"
-       android:layout_height="match_parent">
-       <ImageView
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:src="@drawable/fridge_primary"
-           android:layout_marginTop="40dp"
-           android:adjustViewBounds="true"
-          android:scaleType="centerCrop"
-       />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
 
-       <Button
-           android:id="@+id/button_fridge_inside"
-           android:layout_width="220dp"
-           android:layout_height="90dp"
-           android:layout_alignParentRight="true"
-           android:layout_alignParentBottom="true"
-           android:layout_marginLeft="95dp"
-           android:layout_marginTop="280dp"
-           android:layout_marginRight="95dp"
-           android:layout_marginBottom="370dp"
-           android:text="Let's take a look in the fridge"
-           android:textAllCaps="false">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fridge_primary" />
 
-       </Button>
+        <Button
+            android:id="@+id/button_fridge_inside"
+            android:layout_width="220dp"
+            android:layout_height="90dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="370dp"
+            android:text="Let's take a look in the fridge"
+            android:textAllCaps="false">
 
-       <Button
-           android:id="@+id/button_fridge_specific"
-           android:layout_width="220dp"
-           android:layout_height="90dp"
-           android:layout_alignParentRight="true"
-           android:layout_alignParentBottom="true"
-           android:layout_marginLeft="95dp"
-           android:layout_marginTop="380dp"
-           android:layout_marginRight="95dp"
-           android:layout_marginBottom="270dp"
-           android:text="Looking for something specific?"
-           android:textAllCaps="false">
+        </Button>
 
-       </Button>
+        <Button
+            android:id="@+id/button_fridge_specific"
+            android:layout_width="220dp"
+            android:layout_height="90dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="380dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="270dp"
+            android:text="Looking for something specific?"
+            android:textAllCaps="false">
 
-       <Button
-           android:id="@+id/button_fridge_cook"
-           android:layout_width="220dp"
-           android:layout_height="90dp"
-           android:layout_alignParentRight="true"
-           android:layout_alignParentBottom="true"
-           android:layout_marginLeft="95dp"
-           android:layout_marginTop="480dp"
-           android:layout_marginRight="95dp"
-           android:layout_marginBottom="170dp"
-           android:text="Want to cook something?"
-           android:textAllCaps="false">
+        </Button>
 
-       </Button>
+        <Button
+            android:id="@+id/button_fridge_cook"
+            android:layout_width="220dp"
+            android:layout_height="90dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="480dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="170dp"
+            android:text="Want to cook something?"
+            android:textAllCaps="false">
 
+        </Button>
 
-   </RelativeLayout>
+        <ImageButton
+            android:id="@+id/button_fridge_notification"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="620dp"
+            android:background="@color/background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/notification_icon_2">
+
+        </ImageButton>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
