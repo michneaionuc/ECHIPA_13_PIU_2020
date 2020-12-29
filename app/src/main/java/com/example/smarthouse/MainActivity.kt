@@ -25,4 +25,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    //back to map
+    fun showMap(view: View) {
+        val intent = Intent(this, MapActivity::class.java)
+        startActivity(intent)
+    }
 }
