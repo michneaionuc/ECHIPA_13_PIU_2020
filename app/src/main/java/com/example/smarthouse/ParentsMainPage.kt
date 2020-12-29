@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.example.smarthouse.fridge.MenuFridgeActivity
 import com.example.smarthouse.security.SecurityMainActivity
 import com.example.smarthouse.temperature.TemperatureActivity
 import com.example.smarthouse.vacuum.VacuumOffActivity
@@ -32,6 +33,13 @@ class ParentsMainPage: AppCompatActivity() {
 
         securityButton.setOnClickListener {
             val intent = Intent(this, SecurityMainActivity::class.java)
+            startActivity(intent)
+        }
+
+        val fridgeButton: ImageButton = findViewById(R.id.fridge_button)
+
+        fridgeButton.setOnClickListener{
+            val intent = Intent(this,MenuFridgeActivity::class.java)
             startActivity(intent)
         }
     }
