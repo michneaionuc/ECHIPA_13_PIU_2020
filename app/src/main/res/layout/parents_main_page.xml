@@ -119,4 +119,14 @@
         android:layout_marginTop="60dp"
         android:layout_marginLeft="100dp"/>
 
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/back_icon"
+        android:onClick="login"
+        android:textColor="@color/primary_burgundy"
+        app:layout_constraintTop_toBottomOf="@id/security_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -134,5 +134,15 @@
         android:textColor="@color/pink"
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/back_icon"
+        android:onClick="back"
+        android:textColor="@color/primary_burgundy"
+        app:layout_constraintTop_toBottomOf="@id/forgot_pin" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

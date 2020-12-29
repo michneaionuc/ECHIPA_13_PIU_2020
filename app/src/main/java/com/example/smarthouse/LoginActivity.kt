@@ -48,4 +48,10 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+
+    //back to home page
+    fun back(view: View) {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
 }
