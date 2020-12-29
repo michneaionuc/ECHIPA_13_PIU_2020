@@ -20,7 +20,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ParentsMainPage" />
+        <activity android:name=".ParentsMainPage"/>
+        <activity android:name=".vacuum.VacuumOffActivity"/>
+        <activity android:name=".vacuum.VacuumOnActivity"/>
+        <activity android:name=".vacuum.VacuumSettingsActivity"/>
+        <activity android:name=".temperature.TemperatureActivity"/>
+        <activity android:name=".security.SecurityMainActivity"/>
+        <activity android:name=".security.SecurityEmergencyCallActivity"/>
+        <activity android:name=".security.SecurityCallingActivity"/>
+        <activity android:name=".security.SecurityViewActivity"/>
+        <activity android:name=".security.SecurityFrontDoorActivity"/>
+        <activity android:name=".LoginActivity"/>
     </application>
 
 </manifest>
