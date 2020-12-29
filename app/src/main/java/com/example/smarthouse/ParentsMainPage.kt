@@ -26,10 +26,17 @@ class ParentsMainPage: AppCompatActivity() {
             startActivity(intent)
         }
 
-        val securityButton: Button = findViewById(R.id.security_button)
+        val securityButton: ImageButton = findViewById(R.id.security_button)
 
         securityButton.setOnClickListener {
             val intent = Intent(this, SecurityMainActivity::class.java)
+            startActivity(intent)
+        }
+
+        val lightButton: ImageButton = findViewById(R.id.light_button)
+
+        lightButton.setOnClickListener {
+            val intent = Intent(this, LightActivity::class.java)
             startActivity(intent)
         }
     }

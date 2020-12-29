@@ -26,6 +26,7 @@
         <activity android:name=".SecurityCallingActivity"/>
         <activity android:name=".SecurityViewActivity"/>
         <activity android:name=".SecurityFrontDoorActivity"/>
+        <activity android:name=".LightActivity"/>
     </application>
 
 </manifest>
