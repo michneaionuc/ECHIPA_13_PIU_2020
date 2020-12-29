@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".ParentsMainPage"/>
         <activity android:name=".TeenageMainPage"/>
+        <activity android:name=".GrandparentsMainPage"/>
+        <activity android:name=".KidsMainPage"/>
         <activity android:name=".vacuum.VacuumOffActivity"/>
         <activity android:name=".vacuum.VacuumOnActivity"/>
         <activity android:name=".vacuum.VacuumSettingsActivity"/>

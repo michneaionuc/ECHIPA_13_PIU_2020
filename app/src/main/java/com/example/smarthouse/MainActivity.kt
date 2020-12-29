@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val grandparentsButton: ImageButton = findViewById(R.id.grandparents_Button)
 
         grandparentsButton.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, GrandparentsMainPage::class.java)
             intent.putExtra("user", "grandparents");
             startActivity(intent)
         }
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val kidsButton: ImageButton = findViewById(R.id.kids_button)
 
         kidsButton.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, KidsMainPage::class.java)
             intent.putExtra("user", "kids");
             startActivity(intent)
         }

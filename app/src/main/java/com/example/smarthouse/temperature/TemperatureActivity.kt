@@ -37,6 +37,9 @@ class TemperatureActivity: AppCompatActivity() {
             "teenage" -> {
                 userIcon.setBackgroundResource(R.drawable.teenage_girl_icon)
             }
+            "grandparents" -> {
+                userIcon.setBackgroundResource(R.drawable.grand_parents_icon)
+            }
         }
 
         val rooms = arrayOf<String>("All", "Kitchen", "Living room", "Bath", "Bedroom parents", "Bedroom grandparents", "Bedroom teen", "Bedroom kids")
