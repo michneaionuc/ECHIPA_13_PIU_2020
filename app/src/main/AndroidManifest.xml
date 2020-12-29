@@ -17,15 +17,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".ParentsMainPage"/>
-        <activity android:name=".VacuumOffActivity"/>
-        <activity android:name=".VacuumOnActivity"/>
-        <activity android:name=".VacuumSettingsActivity"/>
-        <activity android:name=".TemperatureActivity"/>
-        <activity android:name=".SecurityMainActivity"/>
-        <activity android:name=".SecurityEmergencyCallActivity"/>
-        <activity android:name=".SecurityCallingActivity"/>
-        <activity android:name=".SecurityViewActivity"/>
-        <activity android:name=".SecurityFrontDoorActivity"/>
+        <activity android:name=".vacuum.VacuumOffActivity"/>
+        <activity android:name=".vacuum.VacuumOnActivity"/>
+        <activity android:name=".vacuum.VacuumSettingsActivity"/>
+        <activity android:name=".temperature.TemperatureActivity"/>
+        <activity android:name=".security.SecurityMainActivity"/>
+        <activity android:name=".security.SecurityEmergencyCallActivity"/>
+        <activity android:name=".security.SecurityCallingActivity"/>
+        <activity android:name=".security.SecurityViewActivity"/>
+        <activity android:name=".security.SecurityFrontDoorActivity"/>
+        <activity android:name=".LoginActivity"/>
     </application>
 
 </manifest>
