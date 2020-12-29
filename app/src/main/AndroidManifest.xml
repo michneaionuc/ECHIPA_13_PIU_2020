@@ -12,11 +12,11 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ParentsMainPage"/>
+        <activity android:name=".TeenageMainPage"/>
         <activity android:name=".vacuum.VacuumOffActivity"/>
         <activity android:name=".vacuum.VacuumOnActivity"/>
         <activity android:name=".vacuum.VacuumSettingsActivity"/>

@@ -26,6 +26,19 @@ class TemperatureActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.temperature_page)
 
+        val user = intent.getStringExtra("user")
+
+        val userIcon: ImageView = findViewById(R.id.user_icon)
+
+        when(user) {
+            "parents" -> {
+                userIcon.setBackgroundResource(R.drawable.parents_icon)
+            }
+            "teenage" -> {
+                userIcon.setBackgroundResource(R.drawable.teenage_girl_icon)
+            }
+        }
+
         val rooms = arrayOf<String>("All", "Kitchen", "Living room", "Bath", "Bedroom parents", "Bedroom grandparents", "Bedroom teen", "Bedroom kids")
 
         val spinner: Spinner = findViewById(R.id.spinner)
