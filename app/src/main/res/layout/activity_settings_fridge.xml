@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="10dp"
+    tools:context=".fridge.SettingsFridgeActivity">
+
+    <ImageView
+        android:id="@+id/house_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/house_icon"
+        app:layout_constraintEnd_toStartOf="@+id/parents_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/parents_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="220dp"
+        android:src="@drawable/parents_icon"
+        app:layout_constraintStart_toEndOf="@+id/house_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:text="Door open alarm"
+        app:layout_constraintTop_toBottomOf="@id/parents_icon" />
+
+    <CheckBox
+        android:id="@+id/check_saver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Child Lock"
+        app:layout_constraintTop_toBottomOf="@id/check_standard" />
+
+    <CheckBox
+        android:id="@+id/check_cool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Energy Saver"
+        app:layout_constraintTop_toBottomOf="@id/check_saver" />
+
+    <CheckBox
+        android:id="@+id/check_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Stop Freezing"
+        app:layout_constraintTop_toBottomOf="@id/check_cool" />
+
+    <CheckBox
+        android:id="@+id/check_door"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Fruit temperature on buttom shelf"
+        app:layout_constraintTop_toBottomOf="@id/check_lock" />
+
+    <CheckBox
+        android:id="@+id/check_freezer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Power Cool"
+        app:layout_constraintTop_toBottomOf="@id/check_door" />
+
+    <TextView
+        android:id="@+id/text_on_off_fridge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/on_off_fridge"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/check_freezer" />
+
+    <Switch
+        android:id="@+id/switch_fridge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:checked="true"
+        android:gravity="center"
+        android:switchMinWidth="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_on_off_fridge"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

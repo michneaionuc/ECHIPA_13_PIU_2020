@@ -16,6 +16,12 @@ class MenuFridgeActivity : AppCompatActivity() {
             val intent = Intent(this, NotificationFridgeActivity::class.java)
             startActivity(intent)
         }
+
+        val settingsButton: ImageButton = findViewById(R.id.button_fridge_settings)
+        settingsButton.setOnClickListener {
+            val intent = Intent(this, SettingsFridgeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 
