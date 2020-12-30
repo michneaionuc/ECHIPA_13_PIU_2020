@@ -15,25 +15,27 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MapActivity" />
-        <activity android:name=".ParentsMainPage" />
-        <activity android:name=".vacuum.VacuumOffActivity" />
-        <activity android:name=".vacuum.VacuumOnActivity" />
-        <activity android:name=".vacuum.VacuumSettingsActivity" />
-        <activity android:name=".temperature.TemperatureActivity" />
-        <activity android:name=".security.SecurityMainActivity" />
-        <activity android:name=".security.SecurityEmergencyCallActivity" />
-        <activity android:name=".security.SecurityCallingActivity" />
-        <activity android:name=".security.SecurityViewActivity" />
-        <activity android:name=".security.SecurityFrontDoorActivity" />
+        <activity android:name=".ParentsMainPage"/>
+        <activity android:name=".TeenageMainPage"/>
+        <activity android:name=".GrandparentsMainPage"/>
+        <activity android:name=".KidsMainPage"/>
+        <activity android:name=".vacuum.VacuumOffActivity"/>
+        <activity android:name=".vacuum.VacuumOnActivity"/>
+        <activity android:name=".vacuum.VacuumSettingsActivity"/>
+        <activity android:name=".temperature.TemperatureActivity"/>
+        <activity android:name=".security.SecurityMainActivity"/>
+        <activity android:name=".security.SecurityEmergencyCallActivity"/>
+        <activity android:name=".security.SecurityCallingActivity"/>
+        <activity android:name=".security.SecurityViewActivity"/>
+        <activity android:name=".security.SecurityFrontDoorActivity"/>
         <activity android:name=".fridge.MenuFridgeActivity" />
         <activity android:name=".fridge.NotificationFridgeActivity" />
         <activity android:name=".fridge.SettingsFridgeActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity"/>
     </application>
 
 </manifest>

@@ -24,6 +24,19 @@ class VacuumSettingsActivity: AppCompatActivity() {
         val btn2 :RadioButton  =findViewById(R.id.radioBtn2)
         val btn3 :RadioButton  =findViewById(R.id.radioBtn3)
 
+        val userIcon: ImageView = findViewById(R.id.user_icon)
+
+        val user = intent.getStringExtra("user")
+
+        when(user) {
+            "parents" -> {
+                userIcon.setBackgroundResource(R.drawable.parents_icon)
+            }
+            "teenage" -> {
+                userIcon.setBackgroundResource(R.drawable.teenage_girl_icon)
+            }
+        }
+
         customPower.setOnClickListener {
             if (customPower.isChecked) {
                 powerTextView.visibility = View.VISIBLE
