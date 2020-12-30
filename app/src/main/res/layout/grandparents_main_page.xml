@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/house_icon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/house_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/user_icon"/>
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/grand_parents_icon"
+        app:layout_constraintStart_toEndOf="@+id/house_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/smart_home_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/smart_home_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"/>
+
+    <ImageButton
+        android:id="@+id/temperature_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/temperature_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/smart_home_icon"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="150dp"/>
+
+    <ImageButton
+        android:id="@+id/light_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/light_bulb_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/smart_home_icon"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="150dp"/>
+
+    <ImageButton
+        android:id="@+id/fridge_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/fridge_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/smart_home_icon"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="150dp"/>
+
+    <ImageButton
+        android:id="@+id/bathtub_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/bathtub_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/smart_home_icon"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
