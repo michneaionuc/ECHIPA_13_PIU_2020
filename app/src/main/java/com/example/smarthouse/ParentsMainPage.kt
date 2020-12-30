@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
 import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.smarthouse.fridge.MenuFridgeActivity
 import com.example.smarthouse.security.SecurityMainActivity
@@ -45,14 +46,16 @@ class ParentsMainPage: AppCompatActivity() {
 
         fridgeButton.setOnClickListener{
             val intent = Intent(this,MenuFridgeActivity::class.java)
+            intent.putExtra("user", user);
             startActivity(intent)
         }
-    }
 
-    //back to log in
-    fun login(view: View) {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+        val backButton: Button = findViewById(R.id.back_button)
+
+        backButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -34,6 +35,13 @@ class LoginActivity : AppCompatActivity() {
 
         pinEditText = findViewById(R.id.pinEditText)
         pinError = findViewById(R.id.pinError)
+
+        val backButton: Button = findViewById(R.id.back_button)
+
+        backButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun login(view: View) {
@@ -73,11 +81,7 @@ class LoginActivity : AppCompatActivity() {
                 pinError.text = "PIN is wrong!"
             }
         }
+
     }
 
-    //back to home page
-    fun back(view: View) {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
 }

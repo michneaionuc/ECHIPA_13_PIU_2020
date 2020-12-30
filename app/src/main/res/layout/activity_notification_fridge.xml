@@ -14,16 +14,15 @@
         android:layout_height="55dp"
         android:layout_marginStart="30dp"
         android:src="@drawable/house_icon"
-        app:layout_constraintEnd_toStartOf="@+id/parents_icon"
+        app:layout_constraintEnd_toStartOf="@+id/user_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/parents_icon"
+        android:id="@+id/user_icon"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="220dp"
-        android:src="@drawable/parents_icon"
         app:layout_constraintStart_toEndOf="@+id/house_icon"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +35,7 @@
         android:background="@color/background"
         android:src="@drawable/not1"
         android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/parents_icon" />
+        app:layout_constraintTop_toBottomOf="@id/user_icon" />
 
     <ImageView
         android:id="@+id/notification_fridge"
