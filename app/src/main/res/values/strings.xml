@@ -3,4 +3,6 @@
     <string name="login">Log In</string>
     <string name="helloMessageLogin">Hi there! Nice to see you again.</string>
     <string name="pin">PIN</string>
+    <string name="Switches">Switches</string>
+    <string name="Usage">Usage</string>
 </resources>

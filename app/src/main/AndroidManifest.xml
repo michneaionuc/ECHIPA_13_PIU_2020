@@ -27,6 +27,8 @@
         <activity android:name=".SecurityViewActivity"/>
         <activity android:name=".SecurityFrontDoorActivity"/>
         <activity android:name=".LightActivity"/>
+        <activity android:name=".SocketSwitchesActivity"/>
+        <activity android:name=".SocketUsageActivity"/>
     </application>
 
 </manifest>
