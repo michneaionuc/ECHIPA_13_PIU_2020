@@ -9,11 +9,11 @@ import androidx.core.widget.addTextChangedListener
 class LightActivity: AppCompatActivity() {
 
     var selected_room = "All"
-    var mainLightVals = IntArray(7) { i -> 0 }
-    var ledLightVals = IntArray(7) { i -> 0 }
-    var rLightVals = IntArray(7) { i -> 0 }
-    var gLightVals = IntArray(7) { i -> 0 }
-    var bLightVals = IntArray(7) { i -> 0 }
+    var mainLightVals = IntArray(7) { 0 }
+    var ledLightVals = IntArray(7) { 0 }
+    var rLightVals = IntArray(7) { 0 }
+    var gLightVals = IntArray(7) { 0 }
+    var bLightVals = IntArray(7) { 0 }
     var previous_mainLight = 0
     var previous_ledLight = 0
     var previous_rLight = 0
@@ -25,6 +25,10 @@ class LightActivity: AppCompatActivity() {
     var displayed_gLight = 0
     var displayed_bLight = 0
     var allMainLight = 0
+    var allLedLight = 0
+    var allRLight = 0
+    var allGLight = 0
+    var allBLight = 0
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -58,13 +62,15 @@ class LightActivity: AppCompatActivity() {
                                             view: View, position: Int, id: Long) {
                     selected_room = rooms[position]
                     setDisplayedMainLight(selected_room)
-                    println(mainLightVals[0])
-                    println(mainLightVals[1])
-                    println(mainLightVals[2])
-                    println(mainLightVals[3])
-                    println(mainLightVals[4])
-                    println(mainLightVals[5])
-                    println(mainLightVals[6])
+                    setDisplayedLedLight(selected_room)
+                    setDisplayedRLight(selected_room)
+                    setDisplayedGLight(selected_room)
+                    setDisplayedBLight(selected_room)
+                    lightBarMain.progress = displayed_mainLight
+                    lightBarLed.progress = displayed_ledLight
+                    lightBarR.progress = displayed_rLight
+                    lightBarG.progress = displayed_gLight
+                    lightBarB.progress = displayed_bLight
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
@@ -79,6 +85,9 @@ class LightActivity: AppCompatActivity() {
             override fun onProgressChanged(seek: SeekBar,
                                            progress: Int, fromUser: Boolean) {
                 barVal = progress;
+                if(selected_room == "All") {
+                    previous_mainLight = barVal
+                }
                 setMainLight(selected_room, barVal)
                 setDisplayedMainLight(selected_room)
                 mainLightValue.text = progress.toString() + "%"
@@ -98,6 +107,9 @@ class LightActivity: AppCompatActivity() {
             override fun onProgressChanged(seek: SeekBar,
                                            progress: Int, fromUser: Boolean) {
                 barVal = progress;
+                if(selected_room == "All") {
+                    previous_ledLight = barVal
+                }
                 setLedLight(selected_room, barVal)
                 setDisplayedLedLight(selected_room)
                 ledLightValue.text = progress.toString() + "%"
@@ -117,6 +129,9 @@ class LightActivity: AppCompatActivity() {
             override fun onProgressChanged(seek: SeekBar,
                                            progress: Int, fromUser: Boolean) {
                 barVal = progress;
+                if(selected_room == "All") {
+                    previous_rLight = barVal
+                }
                 setRLight(selected_room, barVal)
                 setDisplayedRLight(selected_room)
                 rLightValue.text = "R:" + progress.toString() + "%"
@@ -136,6 +151,9 @@ class LightActivity: AppCompatActivity() {
             override fun onProgressChanged(seek: SeekBar,
                                            progress: Int, fromUser: Boolean) {
                 barVal = progress;
+                if(selected_room == "All") {
+                    previous_gLight = barVal
+                }
                 setGLight(selected_room, barVal)
                 setDisplayedGLight(selected_room)
                 gLightValue.text = "G:" + progress.toString() + "%"
@@ -156,7 +174,7 @@ class LightActivity: AppCompatActivity() {
                                            progress: Int, fromUser: Boolean) {
                 barVal = progress;
                 if(selected_room == "All") {
-                    previous_mainLight = barVal
+                    previous_bLight = barVal
                 }
                 setBLight(selected_room, barVal)
                 setDisplayedBLight(selected_room)
@@ -170,10 +188,6 @@ class LightActivity: AppCompatActivity() {
             override fun onStopTrackingTouch(seek: SeekBar) {
             }
         })
-
-        mainLightValue.addTextChangedListener {
-            lightBarMain.progress = displayed_mainLight
-        }
 
     }
 
@@ -247,34 +261,34 @@ class LightActivity: AppCompatActivity() {
     fun setLedLight(room: String, value: Int) {
         when(room) {
             "All" -> {
-                mainLightVals[0] = value;
-                mainLightVals[1] = value;
-                mainLightVals[2] = value;
-                mainLightVals[3] = value;
-                mainLightVals[4] = value;
-                mainLightVals[5] = value;
-                mainLightVals[6] = value;
+                ledLightVals[0] = value;
+                ledLightVals[1] = value;
+                ledLightVals[2] = value;
+                ledLightVals[3] = value;
+                ledLightVals[4] = value;
+                ledLightVals[5] = value;
+                ledLightVals[6] = value;
             }
             "Kitchen" -> {
-                mainLightVals[0] = value;
+                ledLightVals[0] = value;
             }
             "Living room" -> {
-                mainLightVals[1] = value;
+                ledLightVals[1] = value;
             }
             "Bath" -> {
-                mainLightVals[2] = value;
+                ledLightVals[2] = value;
             }
             "Bedroom parents" -> {
-                mainLightVals[3] = value;
+                ledLightVals[3] = value;
             }
             "Bedroom grandparents" -> {
-                mainLightVals[4] = value;
+                ledLightVals[4] = value;
             }
             "Bedroom teen" -> {
-                mainLightVals[5] = value;
+                ledLightVals[5] = value;
             }
             "Bedroom kids" -> {
-                mainLightVals[6] = value;
+                ledLightVals[6] = value;
             }
         }
     }
@@ -282,25 +296,25 @@ class LightActivity: AppCompatActivity() {
     fun setDisplayedLedLight(room: String) {
         when(room) {
             "Kitchen" -> {
-                displayed_mainLight = mainLightVals[0];
+                displayed_ledLight = ledLightVals[0];
             }
             "Living room" -> {
-                displayed_mainLight = mainLightVals[1];
+                displayed_ledLight = ledLightVals[1];
             }
             "Bath" -> {
-                displayed_mainLight = mainLightVals[2];
+                displayed_ledLight = ledLightVals[2];
             }
             "Bedroom parents" -> {
-                displayed_mainLight = mainLightVals[3];
+                displayed_ledLight = ledLightVals[3];
             }
             "Bedroom grandparents" -> {
-                displayed_mainLight = mainLightVals[4];
+                displayed_ledLight = ledLightVals[4];
             }
             "Bedroom teen" -> {
-                displayed_mainLight = mainLightVals[5];
+                displayed_ledLight = ledLightVals[5];
             }
             "Bedroom kids" -> {
-                displayed_mainLight = mainLightVals[6];
+                displayed_ledLight = ledLightVals[6];
             }
         }
     }
@@ -308,34 +322,34 @@ class LightActivity: AppCompatActivity() {
     fun setRLight(room: String, value: Int) {
         when(room) {
             "All" -> {
-                mainLightVals[0] = value;
-                mainLightVals[1] = value;
-                mainLightVals[2] = value;
-                mainLightVals[3] = value;
-                mainLightVals[4] = value;
-                mainLightVals[5] = value;
-                mainLightVals[6] = value;
+                rLightVals[0] = value;
+                rLightVals[1] = value;
+                rLightVals[2] = value;
+                rLightVals[3] = value;
+                rLightVals[4] = value;
+                rLightVals[5] = value;
+                rLightVals[6] = value;
             }
             "Kitchen" -> {
-                mainLightVals[0] = value;
+                rLightVals[0] = value;
             }
             "Living room" -> {
-                mainLightVals[1] = value;
+                rLightVals[1] = value;
             }
             "Bath" -> {
-                mainLightVals[2] = value;
+                rLightVals[2] = value;
             }
             "Bedroom parents" -> {
-                mainLightVals[3] = value;
+                rLightVals[3] = value;
             }
             "Bedroom grandparents" -> {
-                mainLightVals[4] = value;
+                rLightVals[4] = value;
             }
             "Bedroom teen" -> {
-                mainLightVals[5] = value;
+                rLightVals[5] = value;
             }
             "Bedroom kids" -> {
-                mainLightVals[6] = value;
+                rLightVals[6] = value;
             }
         }
     }
@@ -343,25 +357,25 @@ class LightActivity: AppCompatActivity() {
     fun setDisplayedRLight(room: String) {
         when(room) {
             "Kitchen" -> {
-                displayed_mainLight = mainLightVals[0];
+                displayed_rLight = rLightVals[0];
             }
             "Living room" -> {
-                displayed_mainLight = mainLightVals[1];
+                displayed_rLight = rLightVals[1];
             }
             "Bath" -> {
-                displayed_mainLight = mainLightVals[2];
+                displayed_rLight = rLightVals[2];
             }
             "Bedroom parents" -> {
-                displayed_mainLight = mainLightVals[3];
+                displayed_rLight = rLightVals[3];
             }
             "Bedroom grandparents" -> {
-                displayed_mainLight = mainLightVals[4];
+                displayed_rLight = rLightVals[4];
             }
             "Bedroom teen" -> {
-                displayed_mainLight = mainLightVals[5];
+                displayed_rLight = rLightVals[5];
             }
             "Bedroom kids" -> {
-                displayed_mainLight = mainLightVals[6];
+                displayed_rLight = rLightVals[6];
             }
         }
     }
@@ -369,34 +383,34 @@ class LightActivity: AppCompatActivity() {
     fun setGLight(room: String, value: Int) {
         when(room) {
             "All" -> {
-                mainLightVals[0] = value;
-                mainLightVals[1] = value;
-                mainLightVals[2] = value;
-                mainLightVals[3] = value;
-                mainLightVals[4] = value;
-                mainLightVals[5] = value;
-                mainLightVals[6] = value;
+                gLightVals[0] = value;
+                gLightVals[1] = value;
+                gLightVals[2] = value;
+                gLightVals[3] = value;
+                gLightVals[4] = value;
+                gLightVals[5] = value;
+                gLightVals[6] = value;
             }
             "Kitchen" -> {
-                mainLightVals[0] = value;
+                gLightVals[0] = value;
             }
             "Living room" -> {
-                mainLightVals[1] = value;
+                gLightVals[1] = value;
             }
             "Bath" -> {
-                mainLightVals[2] = value;
+                gLightVals[2] = value;
             }
             "Bedroom parents" -> {
-                mainLightVals[3] = value;
+                gLightVals[3] = value;
             }
             "Bedroom grandparents" -> {
-                mainLightVals[4] = value;
+                gLightVals[4] = value;
             }
             "Bedroom teen" -> {
-                mainLightVals[5] = value;
+                gLightVals[5] = value;
             }
             "Bedroom kids" -> {
-                mainLightVals[6] = value;
+                gLightVals[6] = value;
             }
         }
     }
@@ -404,25 +418,25 @@ class LightActivity: AppCompatActivity() {
     fun setDisplayedGLight(room: String) {
         when(room) {
             "Kitchen" -> {
-                displayed_mainLight = mainLightVals[0];
+                displayed_gLight = gLightVals[0];
             }
             "Living room" -> {
-                displayed_mainLight = mainLightVals[1];
+                displayed_gLight = gLightVals[1];
             }
             "Bath" -> {
-                displayed_mainLight = mainLightVals[2];
+                displayed_gLight = gLightVals[2];
             }
             "Bedroom parents" -> {
-                displayed_mainLight = mainLightVals[3];
+                displayed_gLight = gLightVals[3];
             }
             "Bedroom grandparents" -> {
-                displayed_mainLight = mainLightVals[4];
+                displayed_gLight = gLightVals[4];
             }
             "Bedroom teen" -> {
-                displayed_mainLight = mainLightVals[5];
+                displayed_gLight = gLightVals[5];
             }
             "Bedroom kids" -> {
-                displayed_mainLight = mainLightVals[6];
+                displayed_gLight = gLightVals[6];
             }
         }
     }
@@ -430,34 +444,34 @@ class LightActivity: AppCompatActivity() {
     fun setBLight(room: String, value: Int) {
         when(room) {
             "All" -> {
-                mainLightVals[0] = value;
-                mainLightVals[1] = value;
-                mainLightVals[2] = value;
-                mainLightVals[3] = value;
-                mainLightVals[4] = value;
-                mainLightVals[5] = value;
-                mainLightVals[6] = value;
+                bLightVals[0] = value;
+                bLightVals[1] = value;
+                bLightVals[2] = value;
+                bLightVals[3] = value;
+                bLightVals[4] = value;
+                bLightVals[5] = value;
+                bLightVals[6] = value;
             }
             "Kitchen" -> {
-                mainLightVals[0] = value;
+                bLightVals[0] = value;
             }
             "Living room" -> {
-                mainLightVals[1] = value;
+                bLightVals[1] = value;
             }
             "Bath" -> {
-                mainLightVals[2] = value;
+                bLightVals[2] = value;
             }
             "Bedroom parents" -> {
-                mainLightVals[3] = value;
+                bLightVals[3] = value;
             }
             "Bedroom grandparents" -> {
-                mainLightVals[4] = value;
+                bLightVals[4] = value;
             }
             "Bedroom teen" -> {
-                mainLightVals[5] = value;
+                bLightVals[5] = value;
             }
             "Bedroom kids" -> {
-                mainLightVals[6] = value;
+                bLightVals[6] = value;
             }
         }
     }
@@ -465,25 +479,25 @@ class LightActivity: AppCompatActivity() {
     fun setDisplayedBLight(room: String) {
         when(room) {
             "Kitchen" -> {
-                displayed_mainLight = mainLightVals[0];
+                displayed_bLight = bLightVals[0];
             }
             "Living room" -> {
-                displayed_mainLight = mainLightVals[1];
+                displayed_bLight = bLightVals[1];
             }
             "Bath" -> {
-                displayed_mainLight = mainLightVals[2];
+                displayed_bLight = bLightVals[2];
             }
             "Bedroom parents" -> {
-                displayed_mainLight = mainLightVals[3];
+                displayed_bLight = bLightVals[3];
             }
             "Bedroom grandparents" -> {
-                displayed_mainLight = mainLightVals[4];
+                displayed_bLight = bLightVals[4];
             }
             "Bedroom teen" -> {
-                displayed_mainLight = mainLightVals[5];
+                displayed_bLight = bLightVals[5];
             }
             "Bedroom kids" -> {
-                displayed_mainLight = mainLightVals[6];
+                displayed_bLight = bLightVals[6];
             }
         }
     }
