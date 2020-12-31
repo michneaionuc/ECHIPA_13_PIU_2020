@@ -13,5 +13,15 @@ class KidsMainPage: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kids_main_page)
+
+        val user = intent.getStringExtra("user")
+
+        val lightButton: ImageButton = findViewById(R.id.light_button)
+
+        lightButton.setOnClickListener {
+            val intent = Intent(this, LightActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
     }
 }

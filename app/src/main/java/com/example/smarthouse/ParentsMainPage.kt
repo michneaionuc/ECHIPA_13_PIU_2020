@@ -44,6 +44,7 @@ class ParentsMainPage: AppCompatActivity() {
 
         lightButton.setOnClickListener {
             val intent = Intent(this, LightActivity::class.java)
+            intent.putExtra("user", user);
             startActivity(intent)
         }
     }
