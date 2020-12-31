@@ -1,14 +1,12 @@
-package com.example.smarthouse
+package com.example.smarthouse.vacuum
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ProgressBar
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.smarthouse.R
 import java.time.LocalDateTime
 import java.util.*
 
@@ -27,6 +25,10 @@ class VacuumOnActivity: AppCompatActivity() {
         val batteryLifeProgressBar :ProgressBar = findViewById(R.id.battery_life_progress_bar)
         val dustStorageProgressBar :ProgressBar = findViewById(R.id.dust_storage_progress_bar)
 
+        val userIcon: ImageView = findViewById(R.id.user_icon)
+
+        val user = intent.getStringExtra("user")
+
         var batteryLifeValue = 100
         var dustsStorageValue = 100
 
@@ -34,6 +36,15 @@ class VacuumOnActivity: AppCompatActivity() {
         var timerDust = 100
 
         val current = LocalDateTime.now()
+
+        when(user) {
+            "parents" -> {
+                userIcon.setBackgroundResource(R.drawable.parents_icon)
+            }
+            "teenage" -> {
+                userIcon.setBackgroundResource(R.drawable.teenage_girl_icon)
+            }
+        }
 
         batteryLifeTextView.text = "Battery life    " + batteryLifeValue + "%"
         dustStorageTextView.text = "Dust storage  " + dustsStorageValue + "%"
@@ -44,6 +55,7 @@ class VacuumOnActivity: AppCompatActivity() {
 
         vacuumSettingsButton.setOnClickListener {
             val intent = Intent(this, VacuumSettingsActivity::class.java)
+            intent.putExtra("user", user)
             startActivity(intent)
         }
 

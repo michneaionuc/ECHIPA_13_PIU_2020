@@ -1,10 +1,11 @@
-package com.example.smarthouse
+package com.example.smarthouse.vacuum
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.smarthouse.R
 
 class VacuumSettingsActivity: AppCompatActivity() {
 
@@ -22,6 +23,19 @@ class VacuumSettingsActivity: AppCompatActivity() {
         val btn1 :RadioButton  =findViewById(R.id.radioBtn1)
         val btn2 :RadioButton  =findViewById(R.id.radioBtn2)
         val btn3 :RadioButton  =findViewById(R.id.radioBtn3)
+
+        val userIcon: ImageView = findViewById(R.id.user_icon)
+
+        val user = intent.getStringExtra("user")
+
+        when(user) {
+            "parents" -> {
+                userIcon.setBackgroundResource(R.drawable.parents_icon)
+            }
+            "teenage" -> {
+                userIcon.setBackgroundResource(R.drawable.teenage_girl_icon)
+            }
+        }
 
         customPower.setOnClickListener {
             if (customPower.isChecked) {
