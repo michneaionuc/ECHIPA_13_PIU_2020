@@ -21,6 +21,19 @@ class SocketUsageActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.socket_usage_page)
 
+        val user = intent.getStringExtra("user")
+
+        val userIcon: ImageView = findViewById(R.id.user_icon)
+
+        when(user) {
+            "parents" -> {
+                userIcon.setBackgroundResource(R.drawable.parents_icon)
+            }
+            "teenage" -> {
+                userIcon.setBackgroundResource(R.drawable.teenage_girl_icon)
+            }
+        }
+
         val switchesButton = findViewById<Button>(R.id.switches)
 
         switchesButton.setOnClickListener {

@@ -17,16 +17,16 @@
         android:src="@drawable/house_icon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/parents_icon"/>
+        app:layout_constraintEnd_toStartOf="@+id/user_icon"/>
 
     <ImageView
-        android:id="@+id/parents_icon"
+        android:id="@+id/user_icon"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginRight="40dp"
         android:layout_marginStart="210dp"
         android:layout_marginTop="10dp"
-        android:src="@drawable/parents_icon"
+        android:src="@drawable/grand_parents_icon"
         app:layout_constraintStart_toEndOf="@+id/house_icon"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,36 +44,26 @@
         android:layout_marginRight="40dp"/>
 
     <ImageButton
-        android:id="@+id/light_button"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@drawable/light_bulb_icon"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/smart_home_icon"
-        android:layout_marginBottom="30dp" />
-
-    <ImageButton
         android:id="@+id/temperature_button"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="@drawable/temperature_icon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/light_button"
+        app:layout_constraintRight_toLeftOf="@id/smart_home_icon"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="100dp"/>
+        android:layout_marginBottom="150dp"/>
 
     <ImageButton
-        android:id="@+id/bathtub_button"
+        android:id="@+id/light_button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/bathtub_icon"
+        android:background="@drawable/light_bulb_icon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/light_button"
+        app:layout_constraintLeft_toRightOf="@id/smart_home_icon"
         android:layout_marginLeft="30dp"
-        android:layout_marginBottom="100dp"/>
+        android:layout_marginBottom="150dp"/>
 
     <ImageButton
         android:id="@+id/fridge_button"
@@ -82,51 +72,19 @@
         android:background="@drawable/fridge_icon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/light_button"
+        app:layout_constraintRight_toLeftOf="@id/smart_home_icon"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="150dp"/>
 
     <ImageButton
-        android:id="@+id/socket_button"
+        android:id="@+id/bathtub_button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/socket_icon"
+        android:background="@drawable/bathtub_icon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/light_button"
+        app:layout_constraintLeft_toRightOf="@id/smart_home_icon"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="100dp"/>
-
-    <ImageButton
-        android:id="@+id/security_button"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@drawable/security_icon"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/smart_home_icon"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="100dp"/>
-
-    <ImageButton
-        android:id="@+id/vacuum_button"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@drawable/vacuum_icon"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/smart_home_icon"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="100dp"/>
-
-    <Button
-        android:id="@+id/back_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/back_icon"
-        android:onClick="login"
-        android:textColor="@color/primary_burgundy"
-        app:layout_constraintTop_toBottomOf="@id/security_button" />
+        android:layout_marginTop="150dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

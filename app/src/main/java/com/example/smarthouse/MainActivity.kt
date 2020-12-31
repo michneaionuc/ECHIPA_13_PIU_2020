@@ -4,8 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,36 +15,42 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        pinEditText = findViewById(R.id.pinEditText)
-        pinError = findViewById(R.id.pinError)
+        val parentsButton: ImageButton = findViewById(R.id.parents_button)
+
+        parentsButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.putExtra("user", "parents");
+            startActivity(intent)
+        }
+
+        val teenageButton: ImageButton = findViewById(R.id.teenage_button)
+
+        teenageButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.putExtra("user", "teenage");
+            startActivity(intent)
+        }
+
+        val grandparentsButton: ImageButton = findViewById(R.id.grandparents_Button)
+
+        grandparentsButton.setOnClickListener {
+            val intent = Intent(this, GrandparentsMainPage::class.java)
+            intent.putExtra("user", "grandparents");
+            startActivity(intent)
+        }
+
+        val kidsButton: ImageButton = findViewById(R.id.kids_button)
+
+        kidsButton.setOnClickListener {
+            val intent = Intent(this, KidsMainPage::class.java)
+            intent.putExtra("user", "kids");
+            startActivity(intent)
+        }
     }
 
-    fun login(view: View) {
-        System.out.println(pinEditText.text)
-        val pinValue = pinEditText.text
-        var isPinValid: Boolean = false
-
-        if(pinValue.isEmpty()) {
-            isPinValid = false
-            pinError.visibility = View.VISIBLE
-            pinError.text="PIN cannot be empty!"
-        } else if(pinValue.toString().length != 4) {
-            isPinValid = false
-            pinError.visibility = View.VISIBLE
-            pinError.text="PIN has wrong length!"
-        } else {
-            isPinValid = true
-        }
-
-        if(isPinValid) {
-            if (pinValue.toString() == "1234") {
-                pinError.visibility = View.GONE
-                val intent = Intent(this, ParentsMainPage::class.java)
-                startActivity(intent)
-            } else {
-                pinError.visibility = View.VISIBLE
-                pinError.text = "PIN is wrong!"
-            }
-        }
+    //back to map
+    fun showMap(view: View) {
+        val intent = Intent(this, MapActivity::class.java)
+        startActivity(intent)
     }
 }

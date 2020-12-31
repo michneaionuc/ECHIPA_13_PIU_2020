@@ -1,12 +1,11 @@
-package com.example.smarthouse
+package com.example.smarthouse.temperature
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.get
 import androidx.core.widget.addTextChangedListener
+import com.example.smarthouse.R
 
 class TemperatureActivity: AppCompatActivity() {
 
@@ -26,6 +25,22 @@ class TemperatureActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.temperature_page)
+
+        val user = intent.getStringExtra("user")
+
+        val userIcon: ImageView = findViewById(R.id.user_icon)
+
+        when(user) {
+            "parents" -> {
+                userIcon.setBackgroundResource(R.drawable.parents_icon)
+            }
+            "teenage" -> {
+                userIcon.setBackgroundResource(R.drawable.teenage_girl_icon)
+            }
+            "grandparents" -> {
+                userIcon.setBackgroundResource(R.drawable.grand_parents_icon)
+            }
+        }
 
         val rooms = arrayOf<String>("All", "Kitchen", "Living room", "Bath", "Bedroom parents", "Bedroom grandparents", "Bedroom teen", "Bedroom kids")
 

@@ -10,129 +10,63 @@
 
     <ImageView
         android:id="@+id/house_icon"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:src="@drawable/house_icon"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/parents_icon"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
-    <ImageView
-        android:id="@+id/parents_icon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginStart="210dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/parents_icon"
-        app:layout_constraintStart_toEndOf="@+id/house_icon"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/log_in"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
+    <ImageButton
+        android:id="@+id/parents_button"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/parents_first_page_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/house_icon"
         android:layout_marginTop="70dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="40dp"
-        android:textColorLink="@color/black"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/parents_icon" />
+        android:layout_marginLeft="25dp"/>
 
-    <TextView
-        android:id="@+id/welcome_message"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/helloMessageLogin"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:textColor="@color/dark_gray"
-        app:layout_constraintTop_toBottomOf="@+id/log_in" />
+    <ImageButton
+        android:id="@+id/teenage_button"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/teenage_first_page"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/house_icon"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="25dp"/>
 
-    <TextView
-        android:id="@+id/pin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/pin"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="40dp"
-        android:textSize="20sp"
-        android:textColor="@color/pink"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
-
-    <EditText
-        android:id="@+id/pinEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="40dp"
-        android:password="true"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/pin"
+    <ImageButton
+        android:id="@+id/grandparents_Button"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/grandparents_fist_page_icon"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/parents_button"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"/>
 
-    <TextView
-        android:id="@+id/pinError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/pink"
-        android:textSize="16sp"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@+id/pinEditText"
-        tools:layout_editor_absoluteX="60dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+    <ImageButton
+        android:id="@+id/kids_button"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/kids_first_page_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/teenage_button"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"/>
 
     <Button
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="50dp"
-        android:radius="10dp"
-        android:backgroundTint="@color/pink"
-        android:text="@string/login"
-        android:background="@color/pink"
-        android:textColorLink="@color/white"
-        android:onClick="login"
-        app:layout_constraintTop_toBottomOf="@+id/pinError"
-        />
-
-    <TextView
-        android:id="@+id/forgot_pin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Forgot PIN?"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="20dp"
-        android:textSize="16sp"
-        android:onClick="forgotPin"
-        android:textColor="@color/dark_gray"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
-
-    <TextView
-        android:id="@+id/sign_up"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:layout_marginLeft="260dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="20dp"
-        android:textSize="16sp"
-        android:onClick="signUp"
-        android:textColor="@color/pink"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
+        android:id="@+id/back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/back_icon"
+        android:onClick="showMap"
+        android:textColor="@color/primary_burgundy"
+        app:layout_constraintTop_toBottomOf="@id/grandparents_Button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
