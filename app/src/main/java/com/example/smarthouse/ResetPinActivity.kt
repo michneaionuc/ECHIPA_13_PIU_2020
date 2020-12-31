@@ -2,25 +2,25 @@ package com.example.smarthouse
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
-class LoginActivity : AppCompatActivity() {
+class ResetPinActivity: AppCompatActivity() {
 
     private lateinit var pinError: TextView
     private lateinit var pinEditText: EditText
+    private lateinit var retypePinEditText: EditText
+    private lateinit var emailEditText: EditText
 
     var user = ""
-    val REQUEST_CODE = 100
-    var pin = "1234"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_page)
+        setContentView(R.layout.reset_pin_page)
 
         user = intent.getStringExtra("user").toString()
 
@@ -34,59 +34,49 @@ class LoginActivity : AppCompatActivity() {
                 userIcon.setBackgroundResource(R.drawable.teenage_girl_icon)
             }
         }
-
+        println(user)
         pinEditText = findViewById(R.id.pinEditText)
+        retypePinEditText = findViewById(R.id.retypePinEditText)
+        emailEditText = findViewById(R.id.emailEditText)
         pinError = findViewById(R.id.pinError)
+
     }
 
-    fun login(view: View) {
+    fun save(view: View) {
         val pinValue = pinEditText.text
+        val retypePinValue = retypePinEditText.text
+        val emailValue = emailEditText.text
         var isPinValid: Boolean = false
 
-        if(pinValue.isEmpty()) {
+        if(pinValue.isEmpty() || retypePinValue.isEmpty() || emailValue.isEmpty()) {
             isPinValid = false
             pinError.visibility = View.VISIBLE
-            pinError.text="PIN cannot be empty!"
-        } else if(pinValue.toString().length != 4) {
+            pinError.text="You have empty fields!"
+        } else if(pinValue.toString().length != 4 || retypePinValue.toString().length != 4) {
             isPinValid = false
             pinError.visibility = View.VISIBLE
             pinError.text="PIN has wrong length!"
+        } else if(pinValue.toString().compareTo(retypePinValue.toString()) != 0) {
+            isPinValid = false
+            pinError.visibility = View.VISIBLE
+            pinError.text="The retyped PIN is wrong!"
         } else {
             isPinValid = true
         }
 
         if(isPinValid) {
-            if (pinValue.toString().compareTo(pin) == 0) {
+
+            if (emailValue.toString().compareTo("team13@email.com") == 0 ) {
                 pinError.visibility = View.GONE
-                when(user) {
-                    "parents" -> {
-                        val intent = Intent(this, ParentsMainPage::class.java)
-                        intent.putExtra("user", user);
-                        startActivity(intent)
-                    }
-                    "teenage" -> {
-                        val intent = Intent(this, TeenageMainPage::class.java)
-                        intent.putExtra("user", user);
-                        startActivity(intent)
-                    }
-                }
+                val intent = Intent()
+                intent.putExtra("pin", pinValue.toString())
+
+                setResult(Activity.RESULT_OK, intent)
+                finish()
             } else {
                 pinError.visibility = View.VISIBLE
-                pinError.text = "PIN is wrong!"
+                pinError.text = "Email is wrong!"
             }
-        }
-    }
-
-    fun forgotPin(view: View) {
-        val intent = Intent(this, ResetPinActivity::class.java)
-        intent.putExtra("user", user);
-        startActivityForResult(intent, REQUEST_CODE)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK){
-            pin = data?.getStringExtra("pin").toString()
         }
     }
 
