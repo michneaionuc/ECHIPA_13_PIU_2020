@@ -37,7 +37,14 @@ class MenuFridgeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        when(user) {
+        val specificButton: Button = findViewById(R.id.button_fridge_specific)
+        specificButton.setOnClickListener {
+            val intent = Intent(this, SearchIngredientFridgeActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
+
+        when (user) {
             "parents" -> {
                 userIcon.setBackgroundResource(R.drawable.parents_icon)
             }
