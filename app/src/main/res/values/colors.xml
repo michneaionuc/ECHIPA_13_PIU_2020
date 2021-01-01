@@ -12,4 +12,5 @@
     <color name="background">#ffe2d8</color>
     <color name="primary_burgundy">#55040E</color>
     <color name="text_color">#993944</color>
+    <color name="light_orange">	#f6daa2</color>
 </resources>
