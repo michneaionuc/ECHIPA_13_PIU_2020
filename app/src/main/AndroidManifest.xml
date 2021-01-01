@@ -39,6 +39,8 @@
         <activity android:name=".fridge.InsideFridgeZoomInActivity" />
         <activity android:name=".fridge.FoundIngredientFridgeActivity" />
         <activity android:name=".fridge.SearchIngredientFridgeActivity" />
+        <activity android:name=".fridge.FoundCookingFridgeActivity" />
+        <activity android:name=".fridge.SearchCookingInFridgeActivity" />
         <activity android:name=".LoginActivity" />
     </application>
 

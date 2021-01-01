@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:padding="10dp"
-    tools:context=".fridge.SearchIngredientFridgeActivity">
+    tools:context=".fridge.FoundCookingFridgeActivity">
 
     <ImageView
         android:id="@+id/house_icon"
@@ -26,40 +26,59 @@
         app:layout_constraintStart_toEndOf="@+id/house_icon"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/search_image"
+    <TextView
+        android:id="@+id/recipe_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/search_ingredient_fridge"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Recipe"
+        android:textColor="@color/text_color"
+        android:textSize="31dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/house_icon" />
 
-    <EditText
-        android:id="@+id/search_input"
+    <TextView
+        android:id="@+id/text_have"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:hint="Insert here"
-        app:layout_constraintTop_toBottomOf="@+id/search_image" />
+        android:text="@string/fridge_have"
+        android:textColor="@color/text_color"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/recipe_name" />
 
-    <Button
-        android:id="@+id/search_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Search"
-        app:layout_constraintTop_toBottomOf="@id/search_input" />
 
     <ImageView
-        android:id="@+id/search_animation"
+        android:id="@+id/image_proof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fridge_proof"
+        app:layout_constraintTop_toBottomOf="@id/text_have" />
+
+    <ListView
+        android:id="@+id/list_have"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:cropToPadding="true"
-        android:padding="30dp"
-        android:src="@drawable/fridge_looking"
-        app:layout_constraintTop_toBottomOf="@id/search_button" />
+        android:background="@color/light_orange"
+        app:layout_constraintTop_toBottomOf="@id/image_proof" />
+
+    <TextView
+        android:id="@+id/text_need"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/shopping_list"
+        android:textColor="@color/text_color"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@id/list_have" />
+
+    <ListView
+        android:id="@+id/list_need"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_orange"
+        app:layout_constraintTop_toBottomOf="@id/text_need" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

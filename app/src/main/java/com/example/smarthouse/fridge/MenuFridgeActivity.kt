@@ -44,6 +44,13 @@ class MenuFridgeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val cookButton: Button = findViewById(R.id.button_fridge_cook)
+        cookButton.setOnClickListener {
+            val intent = Intent(this, SearchCookingInFridgeActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
+
         when (user) {
             "parents" -> {
                 userIcon.setBackgroundResource(R.drawable.parents_icon)

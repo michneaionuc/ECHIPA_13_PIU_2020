@@ -4,4 +4,7 @@
     <string name="helloMessageLogin">Hi there! Nice to see you again.</string>
     <string name="pin">PIN</string>
     <string name="on_off_fridge">Turn on/off the refrigerator:</string>
+    <string name="name_recipe_hint">Insert here the name of the recipe</string>
+    <string name="fridge_have">In the refrigerator we already have:</string>
+    <string name="shopping_list">Here is your shopping list:</string>
 </resources>
