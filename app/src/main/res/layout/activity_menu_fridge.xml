@@ -32,7 +32,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="468dp"
             android:layout_marginTop="40dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
@@ -45,9 +45,9 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="95dp"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="300dp"
             android:layout_marginRight="95dp"
-            android:layout_marginBottom="370dp"
+            android:layout_marginBottom="350dp"
             android:text="Let's take a look in the fridge"
             android:textAllCaps="false">
 
@@ -60,9 +60,9 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="95dp"
-            android:layout_marginTop="380dp"
+            android:layout_marginTop="400dp"
             android:layout_marginRight="95dp"
-            android:layout_marginBottom="270dp"
+            android:layout_marginBottom="250dp"
             android:text="Looking for something specific?"
             android:textAllCaps="false">
 
@@ -75,9 +75,9 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="95dp"
-            android:layout_marginTop="480dp"
+            android:layout_marginTop="500dp"
             android:layout_marginRight="95dp"
-            android:layout_marginBottom="170dp"
+            android:layout_marginBottom="150dp"
             android:text="Want to cook something?"
             android:textAllCaps="false">
 
@@ -90,7 +90,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="2dp"
-            android:layout_marginBottom="620dp"
+            android:layout_marginBottom="520dp"
             android:background="@color/background"
             android:scaleType="centerCrop"
             android:src="@drawable/notification_icon_2" />

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fridge.InsideFridgeZoomOutActivity"
+    android:background="@color/background"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/house_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/house_icon"
+        app:layout_constraintEnd_toStartOf="@+id/user_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="220dp"
+        app:layout_constraintStart_toEndOf="@+id/house_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fridge_eyes" />
+
+        <ImageView
+            android:id="@+id/inside_fridge_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="230dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+
+            android:src="@drawable/inside_fridge_zoom_out" />
+
+        <Button
+            android:id="@+id/button_raft_1"
+            android:layout_width="239dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="370dp"
+            android:alpha="0.2"
+            android:background="@color/background"
+            android:padding="1dp"
+            android:shadowColor="@color/black" />
+
+        <Button
+            android:id="@+id/button_raft_2"
+            android:layout_width="232dp"
+            android:layout_height="103dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="340dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="280dp"
+            android:alpha="0.2"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/button_raft_3"
+            android:layout_width="242dp"
+            android:layout_height="176dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="440dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="120dp"
+            android:alpha="0.2"
+            android:background="@color/purple_200" />
+
+        <Button
+            android:id="@+id/button_door_1"
+            android:layout_width="wrap_content"
+            android:layout_height="384dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginEnd="290dp"
+            android:layout_marginBottom="110dp"
+            android:alpha="0.2"
+            android:background="@color/teal_700" />
+
+        <Button
+            android:id="@+id/button_door_2"
+            android:layout_width="wrap_content"
+            android:layout_height="386dp"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginBottom="110dp"
+            android:alpha="0.2"
+            android:background="@color/primary_burgundy" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

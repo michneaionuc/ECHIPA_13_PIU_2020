@@ -2,6 +2,7 @@ package com.example.smarthouse.fridge
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +26,13 @@ class MenuFridgeActivity : AppCompatActivity() {
         val settingsButton: ImageButton = findViewById(R.id.button_fridge_settings)
         settingsButton.setOnClickListener {
             val intent = Intent(this, SettingsFridgeActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
+
+        val insideButton: Button = findViewById(R.id.button_fridge_inside)
+        insideButton.setOnClickListener {
+            val intent = Intent(this, InsideFridgeZoomOutActivity::class.java)
             intent.putExtra("user", user);
             startActivity(intent)
         }
