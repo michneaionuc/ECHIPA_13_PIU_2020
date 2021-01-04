@@ -36,6 +36,7 @@
         <activity android:name=".garage.GarageCloseActivity"/>
         <activity android:name=".garage.GarageOpenActivity"/>
         <activity android:name=".garage.VocalAssistantActivity"/>
+        <activity android:name=".ResetPinActivity"/>
     </application>
 
 </manifest>
