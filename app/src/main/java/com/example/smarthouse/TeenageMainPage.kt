@@ -32,6 +32,14 @@ class TeenageMainPage: AppCompatActivity() {
             startActivity(intent)
         }
 
+        val lightButton: ImageButton = findViewById(R.id.light_button)
+
+        lightButton.setOnClickListener {
+            val intent = Intent(this, LightActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
+      
         val socketButton: ImageButton = findViewById(R.id.socket_button)
 
         socketButton.setOnClickListener {

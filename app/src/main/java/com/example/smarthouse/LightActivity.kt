@@ -34,6 +34,8 @@ class LightActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.light_page)
 
+        val user = intent.getStringExtra("user")
+
         val rooms = arrayOf<String>("All", "Kitchen", "Living room", "Bath", "Bedroom parents", "Bedroom grandparents", "Bedroom teen", "Bedroom kids")
 
         val spinner: Spinner = findViewById(R.id.spinner)
@@ -47,6 +49,22 @@ class LightActivity: AppCompatActivity() {
         val rLightValue: TextView = findViewById(R.id.r_light_value)
         val gLightValue: TextView = findViewById(R.id.g_light_value)
         val bLightValue: TextView = findViewById(R.id.b_light_value)
+        val userIcon: ImageView = findViewById(R.id.user_icon)
+
+        when(user) {
+            "parents" -> {
+                userIcon.setBackgroundResource(R.drawable.parents_icon)
+            }
+            "teenage" -> {
+                userIcon.setBackgroundResource(R.drawable.teenage_girl_icon)
+            }
+            "grandparents" -> {
+                userIcon.setBackgroundResource(R.drawable.grand_parents_icon)
+            }
+            "kids" -> {
+                userIcon.setBackgroundResource(R.drawable.kids_icon)
+            }
+        }
 
         if (spinner != null) {
             val roomsAdapter = ArrayAdapter(
