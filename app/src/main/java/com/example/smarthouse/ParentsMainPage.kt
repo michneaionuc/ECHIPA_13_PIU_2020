@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.smarthouse.garage.VocalAssistantActivity
 import com.example.smarthouse.security.SecurityMainActivity
 import com.example.smarthouse.temperature.TemperatureActivity
 import com.example.smarthouse.vacuum.VacuumOffActivity
@@ -37,6 +38,13 @@ class ParentsMainPage: AppCompatActivity() {
 
         securityButton.setOnClickListener {
             val intent = Intent(this, SecurityMainActivity::class.java)
+            startActivity(intent)
+        }
+
+        val microphoneButton: ImageButton = findViewById(R.id.microphone)
+
+        microphoneButton.setOnClickListener {
+            val intent = Intent(this, VocalAssistantActivity::class.java)
             startActivity(intent)
         }
     }

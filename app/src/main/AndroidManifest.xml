@@ -33,6 +33,9 @@
         <activity android:name=".security.SecurityViewActivity"/>
         <activity android:name=".security.SecurityFrontDoorActivity"/>
         <activity android:name=".LoginActivity"/>
+        <activity android:name=".garage.GarageCloseActivity"/>
+        <activity android:name=".garage.GarageOpenActivity"/>
+        <activity android:name=".garage.VocalAssistantActivity"/>
         <activity android:name=".ResetPinActivity"/>
     </application>
 
