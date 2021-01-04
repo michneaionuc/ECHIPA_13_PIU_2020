@@ -119,6 +119,17 @@
         android:layout_marginTop="60dp"
         android:layout_marginLeft="100dp"/>
 
+    <ImageButton
+        android:id="@+id/microphone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/microphone_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vacuum_button"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="210dp"/>
+
     <Button
         android:id="@+id/back_button"
         android:layout_width="50dp"

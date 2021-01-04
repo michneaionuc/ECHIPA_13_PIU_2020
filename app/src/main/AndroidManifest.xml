@@ -21,6 +21,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ParentsMainPage"/>
+        <activity android:name=".LightActivity"/>
+        <activity android:name=".SocketSwitchesActivity"/>
+        <activity android:name=".SocketUsageActivity"/>
         <activity android:name=".TeenageMainPage"/>
         <activity android:name=".GrandparentsMainPage"/>
         <activity android:name=".KidsMainPage"/>
@@ -34,7 +37,10 @@
         <activity android:name=".security.SecurityViewActivity"/>
         <activity android:name=".security.SecurityFrontDoorActivity"/>
         <activity android:name=".LoginActivity"/>
-        <activity android:name=".LightActivity"/>
+        <activity android:name=".garage.GarageCloseActivity"/>
+        <activity android:name=".garage.GarageOpenActivity"/>
+        <activity android:name=".garage.VocalAssistantActivity"/>
+        <activity android:name=".ResetPinActivity"/>
     </application>
 
 </manifest>
