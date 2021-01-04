@@ -31,5 +31,13 @@ class TeenageMainPage: AppCompatActivity() {
             intent.putExtra("user", user);
             startActivity(intent)
         }
+
+        val socketButton: ImageButton = findViewById(R.id.socket_button)
+
+        socketButton.setOnClickListener {
+            val intent = Intent(this, SocketSwitchesActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
     }
 }
