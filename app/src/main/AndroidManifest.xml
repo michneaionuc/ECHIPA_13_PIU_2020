@@ -12,7 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHouse">
-        <activity android:name=".MapActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,23 +19,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ParentsMainPage"/>
+        <activity android:name=".MapActivity" />
+        <activity android:name=".ParentsMainPage" />
         <activity android:name=".LightActivity"/>
         <activity android:name=".SocketSwitchesActivity"/>
         <activity android:name=".SocketUsageActivity"/>
-        <activity android:name=".TeenageMainPage"/>
-        <activity android:name=".GrandparentsMainPage"/>
-        <activity android:name=".KidsMainPage"/>
-        <activity android:name=".vacuum.VacuumOffActivity"/>
-        <activity android:name=".vacuum.VacuumOnActivity"/>
-        <activity android:name=".vacuum.VacuumSettingsActivity"/>
-        <activity android:name=".temperature.TemperatureActivity"/>
-        <activity android:name=".security.SecurityMainActivity"/>
-        <activity android:name=".security.SecurityEmergencyCallActivity"/>
-        <activity android:name=".security.SecurityCallingActivity"/>
-        <activity android:name=".security.SecurityViewActivity"/>
-        <activity android:name=".security.SecurityFrontDoorActivity"/>
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".TeenageMainPage" />
+        <activity android:name=".GrandparentsMainPage" />
+        <activity android:name=".KidsMainPage" />
+        <activity android:name=".vacuum.VacuumOffActivity" />
+        <activity android:name=".vacuum.VacuumOnActivity" />
+        <activity android:name=".vacuum.VacuumSettingsActivity" />
+        <activity android:name=".temperature.TemperatureActivity" />
+        <activity android:name=".security.SecurityMainActivity" />
+        <activity android:name=".security.SecurityEmergencyCallActivity" />
+        <activity android:name=".security.SecurityCallingActivity" />
+        <activity android:name=".security.SecurityViewActivity" />
+        <activity android:name=".security.SecurityFrontDoorActivity" />
+        <activity android:name=".fridge.MenuFridgeActivity" />
+        <activity android:name=".fridge.NotificationFridgeActivity" />
+        <activity android:name=".fridge.SettingsFridgeActivity" />
+        <activity android:name=".fridge.InsideFridgeZoomOutActivity" />
+        <activity android:name=".fridge.InsideFridgeZoomInActivity" />
+        <activity android:name=".fridge.FoundIngredientFridgeActivity" />
+        <activity android:name=".fridge.SearchIngredientFridgeActivity" />
+        <activity android:name=".fridge.FoundCookingFridgeActivity" />
+        <activity android:name=".fridge.SearchCookingInFridgeActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".garage.GarageCloseActivity"/>
         <activity android:name=".garage.GarageOpenActivity"/>
         <activity android:name=".garage.VocalAssistantActivity"/>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="10dp"
+    tools:context=".fridge.SearchCookingInFridgeActivity">
+
+    <ImageView
+        android:id="@+id/house_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/house_icon"
+        app:layout_constraintEnd_toStartOf="@+id/parents_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="220dp"
+        app:layout_constraintStart_toEndOf="@+id/house_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/search_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/to_cook"
+        app:layout_constraintTop_toBottomOf="@id/house_icon" />
+
+    <EditText
+        android:id="@+id/search_recipe_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:hint="@string/name_recipe_hint"
+        app:layout_constraintTop_toBottomOf="@+id/search_image" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/search_recipe_input" />
+
+    <ImageView
+        android:id="@+id/cook_fridge_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cropToPadding="true"
+        android:padding="20dp"
+        android:src="@drawable/fridge_cook"
+        app:layout_constraintTop_toBottomOf="@id/search_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

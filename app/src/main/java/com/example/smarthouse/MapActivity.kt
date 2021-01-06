@@ -82,7 +82,7 @@ class MapActivity : AppCompatActivity() {
                     android.graphics.Point(motionEvent.x.roundToInt(), motionEvent.y.roundToInt())
                 println(screenPoint.x)
                 println(screenPoint.y)
-                if (screenPoint.x > 450 && screenPoint.x < 700 && screenPoint.y > 850 && screenPoint.y < 1100) {
+                if (screenPoint.x > 450 && screenPoint.x < 700 && screenPoint.y > 820 && screenPoint.y < 1100) {
                     val intent = Intent(this@MapActivity, MainActivity::class.java)
                     startActivity(intent)
                 }
