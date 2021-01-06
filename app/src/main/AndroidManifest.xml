@@ -3,7 +3,10 @@
     package="com.example.smarthouse">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHouse">
+        <activity android:name=".bathtub.BathtubWaterLevelActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,9 +25,9 @@
         </activity>
         <activity android:name=".MapActivity" />
         <activity android:name=".ParentsMainPage" />
-        <activity android:name=".LightActivity"/>
-        <activity android:name=".SocketSwitchesActivity"/>
-        <activity android:name=".SocketUsageActivity"/>
+        <activity android:name=".LightActivity" />
+        <activity android:name=".SocketSwitchesActivity" />
+        <activity android:name=".SocketUsageActivity" />
         <activity android:name=".TeenageMainPage" />
         <activity android:name=".GrandparentsMainPage" />
         <activity android:name=".KidsMainPage" />
@@ -47,10 +51,10 @@
         <activity android:name=".fridge.SearchCookingInFridgeActivity" />
         <activity android:name=".bathtub.BathtubMenuActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".garage.GarageCloseActivity"/>
-        <activity android:name=".garage.GarageOpenActivity"/>
-        <activity android:name=".garage.VocalAssistantActivity"/>
-        <activity android:name=".ResetPinActivity"/>
+        <activity android:name=".garage.GarageCloseActivity" />
+        <activity android:name=".garage.GarageOpenActivity" />
+        <activity android:name=".garage.VocalAssistantActivity" />
+        <activity android:name=".ResetPinActivity" />
     </application>
 
 </manifest>

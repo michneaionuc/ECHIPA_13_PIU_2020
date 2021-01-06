@@ -1,11 +1,13 @@
 package com.example.smarthouse.bathtub
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import com.example.smarthouse.R
+import com.example.smarthouse.fridge.SettingsFridgeActivity
 import pl.droidsonroids.gif.GifImageView
 
 class BathtubMenuActivity : AppCompatActivity() {
@@ -54,5 +56,11 @@ class BathtubMenuActivity : AppCompatActivity() {
            }
         }
 
+        val waterLevelButton: Button = findViewById(R.id.button_water_level)
+        waterLevelButton.setOnClickListener {
+            val intent = Intent(this, BathtubWaterLevelActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
     }
 }

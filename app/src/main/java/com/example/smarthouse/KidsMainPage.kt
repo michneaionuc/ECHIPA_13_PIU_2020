@@ -9,9 +9,9 @@ import com.example.smarthouse.security.SecurityMainActivity
 import com.example.smarthouse.temperature.TemperatureActivity
 import com.example.smarthouse.vacuum.VacuumOffActivity
 
-class KidsMainPage: AppCompatActivity() {
+class KidsMainPage : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?){
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kids_main_page)
 
@@ -19,13 +19,11 @@ class KidsMainPage: AppCompatActivity() {
 
         val bathtubButton: ImageButton = findViewById(R.id.bathtub_button)
 
-        bathtubButton.setOnClickListener{
+        bathtubButton.setOnClickListener {
             val intent = Intent(this, BathtubMenuActivity::class.java)
             intent.putExtra("user", user);
             startActivity(intent)
         }
-
-        val user = intent.getStringExtra("user")
 
         val lightButton: ImageButton = findViewById(R.id.light_button)
 
