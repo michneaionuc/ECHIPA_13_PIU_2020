@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="10dp"
+    tools:context=".bathtub.BathtubMassageActivity">
+
+    <ImageView
+        android:id="@+id/house_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/house_icon"
+        app:layout_constraintEnd_toStartOf="@+id/parents_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="220dp"
+        app:layout_constraintStart_toEndOf="@+id/house_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Massage"
+        android:textColor="@color/text_color"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/house_icon" />
+
+    <CheckBox
+        android:id="@+id/check_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Standard massage"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <CheckBox
+        android:id="@+id/check_intensity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adjust the intensity"
+        app:layout_constraintTop_toBottomOf="@id/check_standard" />
+
+    <SeekBar
+        android:id="@+id/massage_bar"
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/check_intensity"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/massage_gif"
+        android:layout_width="381dp"
+        android:layout_height="188dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/massage"
+        app:layout_constraintTop_toBottomOf="@id/massage_bar" />
+
+    <TextView
+        android:id="@+id/music_rhythm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/musical_rhythm"
+        android:textColor="@color/text_color"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/massage_gif" />
+
+    <ImageButton
+        android:id="@+id/music_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/background"
+        android:src="@drawable/music_button"
+        app:layout_constraintTop_toBottomOf="@id/music_rhythm"
+        tools:layout_editor_absoluteX="110dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
