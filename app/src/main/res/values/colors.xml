@@ -13,4 +13,7 @@
     <color name="primary_burgundy">#55040E</color>
     <color name="text_color">#993944</color>
     <color name="light_orange">	#f6daa2</color>
+    <color name="red">#E9C10000</color>
+    <color name="green">#E900C137</color>
+    <color name="blue">#E9005DC1</color>
 </resources>

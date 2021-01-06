@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity"
+    tools:context=".ResetPinActivity"
     android:background="@color/background">
 
     <ImageView
@@ -30,11 +30,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/log_in"
+        android:id="@id/reset_pin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:layout_marginTop="70dp"
+        android:text="Reset PIN"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="40dp"
         android:textColorLink="@color/black"
@@ -43,28 +43,40 @@
         app:layout_constraintTop_toBottomOf="@+id/user_icon" />
 
     <TextView
-        android:id="@+id/welcome_message"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/helloMessageLogin"
+        android:text="Email"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:textSize="20sp"
-        android:textColor="@color/dark_gray"
-        app:layout_constraintTop_toBottomOf="@+id/log_in" />
+        android:textColor="@color/pink"
+        app:layout_constraintTop_toBottomOf="@+id/reset_pin" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <TextView
         android:id="@+id/pin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pin"
+        android:text="New PIN"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:textColor="@color/pink"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_message" />
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
     <EditText
         android:id="@+id/pinEditText"
@@ -80,19 +92,44 @@
         app:layout_constraintRight_toRightOf="parent"/>
 
     <TextView
+        android:id="@+id/retypePin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retype PIN"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/pink"
+        app:layout_constraintTop_toBottomOf="@+id/pinEditText" />
+
+    <EditText
+        android:id="@+id/retypePinEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:password="true"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/retypePin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
         android:id="@+id/pinError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/pink"
         android:textSize="16sp"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@+id/pinEditText"
+        app:layout_constraintTop_toBottomOf="@+id/retypePinEditText"
         tools:layout_editor_absoluteX="60dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -100,34 +137,22 @@
         android:layout_marginTop="50dp"
         android:radius="10dp"
         android:backgroundTint="@color/pink"
-        android:text="@string/login"
+        android:text="save"
         android:background="@color/pink"
         android:textColorLink="@color/white"
-        android:onClick="login"
+        android:onClick="save"
         app:layout_constraintTop_toBottomOf="@+id/pinError"
         />
-
-    <TextView
-        android:id="@+id/forgot_pin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Forgot PIN?"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="20dp"
-        android:textSize="16sp"
-        android:onClick="forgotPin"
-        android:textColor="@color/dark_gray"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
 
     <Button
         android:id="@+id/back_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:background="@drawable/back_icon"
+        android:onClick="back"
         android:textColor="@color/primary_burgundy"
-        app:layout_constraintTop_toBottomOf="@id/forgot_pin" />
+        app:layout_constraintTop_toBottomOf="@id/save" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
