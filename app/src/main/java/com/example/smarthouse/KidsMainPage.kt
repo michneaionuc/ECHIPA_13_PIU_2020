@@ -24,5 +24,15 @@ class KidsMainPage: AppCompatActivity() {
             intent.putExtra("user", user);
             startActivity(intent)
         }
+
+        val user = intent.getStringExtra("user")
+
+        val lightButton: ImageButton = findViewById(R.id.light_button)
+
+        lightButton.setOnClickListener {
+            val intent = Intent(this, LightActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
     }
 }

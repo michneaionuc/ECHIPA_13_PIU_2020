@@ -15,11 +15,15 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MapActivity" />
         <activity android:name=".ParentsMainPage" />
+        <activity android:name=".LightActivity"/>
+        <activity android:name=".SocketSwitchesActivity"/>
+        <activity android:name=".SocketUsageActivity"/>
         <activity android:name=".TeenageMainPage" />
         <activity android:name=".GrandparentsMainPage" />
         <activity android:name=".KidsMainPage" />
@@ -43,6 +47,10 @@
         <activity android:name=".fridge.SearchCookingInFridgeActivity" />
         <activity android:name=".bathtub.BathtubMenuActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".garage.GarageCloseActivity"/>
+        <activity android:name=".garage.GarageOpenActivity"/>
+        <activity android:name=".garage.VocalAssistantActivity"/>
+        <activity android:name=".ResetPinActivity"/>
     </application>
 
 </manifest>
