@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
 
         val userIcon: ImageView = findViewById(R.id.user_icon)
 
-        when(user) {
+        when (user) {
             "parents" -> {
                 userIcon.setBackgroundResource(R.drawable.parents_icon)
             }
@@ -45,28 +45,34 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        findViewById<TextView>(R.id.forgot_pin).setOnClickListener {
+            val intent = Intent(this, ResetPinActivity::class.java)
+            intent.putExtra("user", user);
+            startActivityForResult(intent, REQUEST_CODE)
+        }
     }
 
     fun login(view: View) {
         val pinValue = pinEditText.text
         var isPinValid: Boolean = false
 
-        if(pinValue.isEmpty()) {
+        if (pinValue.isEmpty()) {
             isPinValid = false
             pinError.visibility = View.VISIBLE
-            pinError.text="PIN cannot be empty!"
-        } else if(pinValue.toString().length != 4) {
+            pinError.text = "PIN cannot be empty!"
+        } else if (pinValue.toString().length != 4) {
             isPinValid = false
             pinError.visibility = View.VISIBLE
-            pinError.text="PIN has wrong length!"
+            pinError.text = "PIN has wrong length!"
         } else {
             isPinValid = true
         }
 
-        if(isPinValid) {
+        if (isPinValid) {
             if (pinValue.toString().compareTo(pin) == 0) {
                 pinError.visibility = View.GONE
-                when(user) {
+                when (user) {
                     "parents" -> {
                         val intent = Intent(this, ParentsMainPage::class.java)
                         intent.putExtra("user", user);
@@ -83,16 +89,11 @@ class LoginActivity : AppCompatActivity() {
                 pinError.text = "PIN is wrong!"
             }
         }
-
-    fun forgotPin(view: View) {
-        val intent = Intent(this, ResetPinActivity::class.java)
-        intent.putExtra("user", user);
-        startActivityForResult(intent, REQUEST_CODE)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK){
+        if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             pin = data?.getStringExtra("pin").toString()
         }
     }
