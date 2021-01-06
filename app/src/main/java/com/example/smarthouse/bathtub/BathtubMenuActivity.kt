@@ -30,35 +30,42 @@ class BathtubMenuActivity : AppCompatActivity() {
             }
             "kids" -> {
                 userIcon.setBackgroundResource(R.drawable.kids_icon)
-                findViewById<Button>(R.id.button_water_temp).isEnabled=false
-                findViewById<Button>(R.id.button_water_level).isEnabled=false
-                findViewById<Button>(R.id.button_water_massage).isEnabled=false
+                findViewById<Button>(R.id.button_water_temp).isEnabled = false
+                findViewById<Button>(R.id.button_water_level).isEnabled = false
+                findViewById<Button>(R.id.button_water_massage).isEnabled = false
             }
         }
 
         val bubbleButton: Button = findViewById(R.id.button_bubble)
         val bubbleGif: GifImageView = findViewById(R.id.bubble_gif)
         bubbleButton.setOnClickListener {
-            if( bubbleGif.visibility==View.VISIBLE){
+            if (bubbleGif.visibility == View.VISIBLE) {
                 bubbleGif.visibility = View.GONE
-            }else{
-                bubbleGif.visibility=View.VISIBLE
+            } else {
+                bubbleGif.visibility = View.VISIBLE
             }
         }
 
-        val foamButton : Button = findViewById(R.id.button_foam)
+        val foamButton: Button = findViewById(R.id.button_foam)
         val foamGif: GifImageView = findViewById(R.id.foam_gif)
         foamButton.setOnClickListener {
-           if( foamGif.visibility==View.VISIBLE){
-               foamGif.visibility = View.GONE
-           }else{
-               foamGif.visibility=View.VISIBLE
-           }
+            if (foamGif.visibility == View.VISIBLE) {
+                foamGif.visibility = View.GONE
+            } else {
+                foamGif.visibility = View.VISIBLE
+            }
         }
 
         val waterLevelButton: Button = findViewById(R.id.button_water_level)
         waterLevelButton.setOnClickListener {
             val intent = Intent(this, BathtubWaterLevelActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
+
+        val waterTempButton: Button = findViewById(R.id.button_water_temp)
+        waterTempButton.setOnClickListener {
+            val intent = Intent(this, BathtubWaterTemperatureActivity::class.java)
             intent.putExtra("user", user);
             startActivity(intent)
         }

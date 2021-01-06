@@ -1,11 +1,13 @@
 package com.example.smarthouse.bathtub
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.ImageView
+import android.widget.RadioButton
+import android.widget.SeekBar
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.smarthouse.R
-import org.w3c.dom.Text
 
 class BathtubWaterLevelActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,9 +27,6 @@ class BathtubWaterLevelActivity : AppCompatActivity() {
             }
             "grandparents" -> {
                 userIcon.setBackgroundResource(R.drawable.grand_parents_icon)
-            }
-            "kids" -> {
-                userIcon.setBackgroundResource(R.drawable.kids_icon)
             }
         }
 

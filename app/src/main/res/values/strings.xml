@@ -9,4 +9,5 @@
     <string name="shopping_list">Here is your shopping list:</string>
     <string name="Switches">Switches</string>
     <string name="Usage">Usage</string>
+    <string name="water_temp">Adjust with body and room temperature</string>
 </resources>
