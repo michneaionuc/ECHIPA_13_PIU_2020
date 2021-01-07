@@ -1,5 +1,6 @@
 package com.example.smarthouse.fridge
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ImageView
@@ -7,6 +8,7 @@ import android.widget.ListView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.smarthouse.R
+import com.example.smarthouse.chef.ChefListeningActivity
 
 class FoundCookingFridgeActivity : AppCompatActivity() {
     var listItemsHave = ArrayList<String>()
@@ -61,6 +63,12 @@ class FoundCookingFridgeActivity : AppCompatActivity() {
             listItemsNeed
         )
         listNeed.adapter = adapterNeed
+
+        findViewById<TextView>(R.id.ask_chef).setOnClickListener {
+            val intent = Intent(this, ChefListeningActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
 
 
     }
