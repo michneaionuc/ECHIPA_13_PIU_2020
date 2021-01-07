@@ -11,4 +11,8 @@
     <string name="Usage">Usage</string>
     <string name="water_temp">Adjust with body and room temperature</string>
     <string name="musical_rhythm">According to musical rhythm:</string>
+    <string name="chef_luis_is_here">Assistant chef Luis is here!</string>
+    <string name="listening">Listening...</string>
+    <string name="luis_is_looking">Luis is looking for your best recipe</string>
+    <string name="found_it">Found it!</string>
 </resources>

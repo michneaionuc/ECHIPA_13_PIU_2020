@@ -15,10 +15,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHouse">
-        <activity android:name=".bathtub.BathtubMusicActivity" />
-        <activity android:name=".bathtub.BathtubMassageActivity" />
-        <activity android:name=".bathtub.BathtubWaterTemperatureActivity" />
-        <activity android:name=".bathtub.BathtubWaterLevelActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,6 +49,13 @@
         <activity android:name=".fridge.FoundCookingFridgeActivity" />
         <activity android:name=".fridge.SearchCookingInFridgeActivity" />
         <activity android:name=".bathtub.BathtubMenuActivity" />
+        <activity android:name=".chef.ChefFoundRecipeActivity" />
+        <activity android:name=".chef.ChefProcessingActivity" />
+        <activity android:name=".chef.ChefListeningActivity" />
+        <activity android:name=".bathtub.BathtubMusicActivity" />
+        <activity android:name=".bathtub.BathtubMassageActivity" />
+        <activity android:name=".bathtub.BathtubWaterTemperatureActivity" />
+        <activity android:name=".bathtub.BathtubWaterLevelActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".garage.GarageCloseActivity" />
         <activity android:name=".garage.GarageOpenActivity" />
