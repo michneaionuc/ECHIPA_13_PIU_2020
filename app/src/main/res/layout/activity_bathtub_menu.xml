@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="10dp"
+    tools:context=".bathtub.BathtubMenuActivity">
+
+    <ImageView
+        android:id="@+id/house_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/house_icon"
+        app:layout_constraintEnd_toStartOf="@+id/parents_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="220dp"
+        app:layout_constraintStart_toEndOf="@+id/house_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+       >
+
+
+        <ImageView
+            android:id="@+id/image_bath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/bathtub" />
+
+        <ImageView
+            android:id="@+id/image_bubble"
+            android:layout_width="240dp"
+            android:layout_height="220dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="121dp"
+            android:src="@drawable/bubble_animation" />
+
+        <Button
+            android:id="@+id/button_water_level"
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="277dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="444dp"
+            android:alpha="0.87"
+            android:text="Water level"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_water_massage"
+            android:layout_width="116dp"
+            android:layout_height="73dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="275dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="250dp"
+            android:alpha="0.87"
+            android:text="Massage"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_water_temp"
+            android:layout_width="123dp"
+            android:layout_height="71dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="268dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="638dp"
+            android:alpha="0.87"
+            android:text="Water temperature"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_foam"
+            android:layout_width="126dp"
+            android:layout_height="76dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="634dp"
+            android:alpha="0.77"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="Bath foam"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_bubble"
+            android:layout_width="126dp"
+            android:layout_height="76dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="95dp"
+            android:layout_marginBottom="255dp"
+            android:alpha="0.77"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="Soap ballons"
+            android:textAllCaps="false" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/bubble_gif"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@drawable/bubble_gif" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/foam_gif"
+            android:layout_width="319dp"
+            android:layout_height="294dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="203dp"
+            android:background="@drawable/foam_gif"
+            android:visibility="gone"
+            android:backgroundTint="@color/light_blue" />
+
+        <pl.droidsonroids.gif.GifImageView
+
+            android:layout_width="158dp"
+            android:layout_height="141dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="651dp"
+            android:background="@drawable/foam_friendly" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
+import com.example.smarthouse.bathtub.BathtubMenuActivity
 import com.example.smarthouse.fridge.MenuFridgeActivity
 import com.example.smarthouse.security.SecurityMainActivity
 import com.example.smarthouse.temperature.TemperatureActivity
@@ -31,6 +32,14 @@ class GrandparentsMainPage: AppCompatActivity() {
 
         fridgeButton.setOnClickListener{
             val intent = Intent(this, MenuFridgeActivity::class.java)
+            intent.putExtra("user", user);
+            startActivity(intent)
+        }
+
+        val bathtubButton: ImageButton = findViewById(R.id.bathtub_button)
+
+        bathtubButton.setOnClickListener{
+            val intent = Intent(this, BathtubMenuActivity::class.java)
             intent.putExtra("user", user);
             startActivity(intent)
         }
