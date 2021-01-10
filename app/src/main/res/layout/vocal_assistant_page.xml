@@ -8,14 +8,6 @@
     tools:context=".VocalAssistantActivity"
     android:background="@color/background">
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:background="@drawable/vocal_assistant"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/house_icon"
         android:layout_marginLeft="20dp"
@@ -37,6 +29,27 @@
         android:src="@drawable/parents_icon"
         app:layout_constraintStart_toEndOf="@+id/house_icon"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/massage_gif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/chef_listening"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_icon" />
+
+    <TextView
+        android:id="@+id/text_listening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/listening"
+        android:textColor="@color/text_color"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/massage_gif" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
