@@ -1,11 +1,10 @@
-package com.example.smarthouse
+package com.example.smarthouse.socket
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.smarthouse.adapter.SocketSwitchAdapter
+import com.example.smarthouse.R
 import com.example.smarthouse.adapter.SocketUsageAdapter
 import com.example.smarthouse.model.Socket
 import java.util.ArrayList
@@ -54,7 +53,7 @@ class SocketUsageActivity: AppCompatActivity() {
         if (spinner != null) {
             val roomsAdapter = ArrayAdapter(
                     this,
-                    R.layout.spinner_list, rooms
+                R.layout.spinner_list, rooms
             )
             roomsAdapter.setDropDownViewResource(R.layout.spinner_list)
             spinner.adapter = roomsAdapter
