@@ -3,13 +3,14 @@ package com.example.smarthouse
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.smarthouse.bathtub.BathtubMenuActivity
 import com.example.smarthouse.fridge.MenuFridgeActivity
 import com.example.smarthouse.garage.VocalAssistantActivity
+import com.example.smarthouse.light.LightActivity
 import com.example.smarthouse.security.SecurityMainActivity
+import com.example.smarthouse.socket.SocketSwitchesActivity
 import com.example.smarthouse.temperature.TemperatureActivity
 import com.example.smarthouse.vacuum.VacuumOffActivity
 

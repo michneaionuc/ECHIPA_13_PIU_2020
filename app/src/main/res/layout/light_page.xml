@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".LightActivity">
+    tools:context=".light.LightActivity">
 
     <ImageView
         android:id="@+id/house_icon"

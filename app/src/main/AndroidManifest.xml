@@ -24,9 +24,9 @@
         </activity>
         <activity android:name=".MapActivity" />
         <activity android:name=".ParentsMainPage" />
-        <activity android:name=".LightActivity" />
-        <activity android:name=".SocketSwitchesActivity" />
-        <activity android:name=".SocketUsageActivity" />
+        <activity android:name=".light.LightActivity" />
+        <activity android:name=".socket.SocketSwitchesActivity" />
+        <activity android:name=".socket.SocketUsageActivity" />
         <activity android:name=".TeenageMainPage" />
         <activity android:name=".GrandparentsMainPage" />
         <activity android:name=".KidsMainPage" />
